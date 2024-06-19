@@ -36,7 +36,7 @@ Prerequisites:
 Steps:
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/final-project-gallery.git
+   git clone[ https://github.com/yourusername/final-project-gallery.git](https://github.com/MarkEtin30/Final-Project-Gallery)
 
 2. Open the project in Visual Studio:
 
