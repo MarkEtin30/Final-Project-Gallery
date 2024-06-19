@@ -1,0 +1,115 @@
+﻿<Window
+    x:Class="PongGame.LandingWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PongGame"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Pong Game"
+    Width="800"
+    Height="730"
+    Icon="pack://application:,,,/PongGame;component/Resources/Pong_icon.png"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <!--  Define some reusable styles  -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#333333" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#4CAF50" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Window.Resources>
+    <StackPanel Margin="20" Background="#F0F0F0">
+        <Frame
+            x:Name="LandingWindow1"
+            Margin="10"
+            HorizontalAlignment="Center"
+            NavigationUIVisibility="Hidden" />
+
+        <StackPanel Orientation="Horizontal">
+
+            <Button
+                Name="userButton"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Click="userButton_Click">
+                <Image
+                    Width="30"
+                    Height="30"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    Source="/PongGame;component/Resources/user_logo.png" />
+            </Button>
+            <TextBlock
+                Margin="250,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="30"
+                FontWeight="Black"
+                Text="Pong" />
+
+        </StackPanel>
+        <Button
+            x:Name="StartGameButton"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Click="Button_Start_Game_Click"
+            Content="Start Game" />
+
+        <!--  Description of the program  -->
+        <TextBlock TextAlignment="Justify" TextWrapping="Wrap">
+            <Run FontSize="16" FontWeight="Bold">Project Description:</Run>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Initialization:</Run>
+            <Italic>Paddles and ball are created as Rectangle objects. Scores are initialized and updated using INotifyPropertyChanged. The ball's speed and position are reset when it goes out of bounds.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Game Loop:</Run>
+            <Italic>Runs at approximately 60 FPS using DispatcherTimer. Updates the ball's position and checks for collisions with the paddles and window edges. Adjusts ball direction upon collision.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Input Handling:</Run>
+            <Italic>Keyboard events (KeyDown) move the paddles up and down.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">UI Elements:</Run>
+            <Italic>Paddles, ball, and divider rectangles are added to the canvas. Player scores are displayed and positioned dynamically.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Collision Detection:</Run>
+            <Italic>Detects and responds to collisions between the ball and paddles. Handles ball movement and resets positions when the ball exits the play area.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Overall:</Run>
+            <Italic>This project demonstrates core concepts of game development in WPF, including real-time updates, collision detection, and user input handling.</Italic>
+        </TextBlock>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/PongGame;component/Resources/Logo_C_Sharp.png" />
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/PongGame;component/Resources/WPF_logo.png" />
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/PongGame;component/Resources/XAML_logo.jpg" />
+        </StackPanel>
+
+    </StackPanel>
+</Window>

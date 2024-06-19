@@ -1,0 +1,28 @@
+﻿<Window
+    x:Class="PongGame.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Pong Game"
+    Width="800"
+    Height="450"
+    Icon="pack://application:,,,/PongGame;component/Resources/Pong_icon.png">
+    <Canvas Name="GameCanvas" Background="Black">
+
+        <TextBlock
+            Name="scorePlayer1TextBlock"
+            Padding="50"
+            FontSize="50"
+            Foreground="White"
+            Loaded="TextBlock_Loaded1"
+            Text="{Binding Player1Score}" />
+
+        <TextBlock
+            Name="scorePlayer2TextBlock"
+            Padding="50"
+            FontSize="50"
+            Foreground="White"
+            Loaded="TextBlock_Loaded2"
+            Text="{Binding Player2Score}" />
+
+    </Canvas>
+</Window>

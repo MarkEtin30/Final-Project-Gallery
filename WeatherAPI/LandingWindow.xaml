@@ -1,0 +1,117 @@
+﻿<Window
+    x:Class="WeatherAPI.LandingWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WeatherAPI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Weather"
+    Width="800"
+    Height="730"
+    Icon="pack://application:,,,/WeatherAPI;component/Resources/Weather_icon.png"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <!--  Define some reusable styles  -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#333333" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#4CAF50" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Window.Resources>
+    <StackPanel Margin="20" Background="#F0F0F0">
+        <Frame
+            x:Name="LandingWindow1"
+            Margin="10"
+            HorizontalAlignment="Center"
+            NavigationUIVisibility="Hidden" />
+
+        <StackPanel Orientation="Horizontal">
+
+            <Button
+                Name="userButton"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Click="userButton_Click">
+                <Image
+                    Width="30"
+                    Height="30"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    Source="/WeatherAPI;component/Resources/user_logo.png" />
+            </Button>
+            <TextBlock
+                Margin="200,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="30"
+                FontWeight="Black"
+                Text="Weather App" />
+
+        </StackPanel>
+        <Button
+            x:Name="StartGameButton"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Click="Button_Start_Game_Click"
+            Content="Start Game" />
+
+        <!--  Description of the program  -->
+        <TextBlock TextAlignment="Justify" TextWrapping="Wrap">
+            <Run FontSize="16" FontWeight="Bold">Project Summary:</Run>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Weather Application:</Run>
+            <Italic>Fetches weather forecasts for a specified city from the OpenWeatherMap API. Displays temperature and weather conditions.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Application Features:</Run>
+            <Italic>Users can input a city name, retrieve current weather information including temperature in Celsius, and view weather conditions.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">API Integration:</Run>
+            <Italic>Utilizes RestSharp for making REST API calls to OpenWeatherMap. JSON responses are deserialized using Newtonsoft.Json.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">User Interface:</Run>
+            <Italic>Designed using WPF with XAML, providing intuitive buttons and text blocks for displaying weather data.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Technologies:</Run>
+            <Italic>Implemented in C#, WPF, XAML, demonstrating integration of modern technologies in desktop applications.</Italic>
+        </TextBlock>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/WeatherAPI;component/Resources/Logo_C_Sharp.png" />
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/WeatherAPI;component/Resources/WPF_logo.png" />
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/WeatherAPI;component/Resources/XAML_logo.jpg" />
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/Trivia;component/Resources/API_logo.jpg" />
+        </StackPanel>
+
+    </StackPanel>
+</Window>

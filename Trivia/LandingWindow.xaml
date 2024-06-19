@@ -1,0 +1,117 @@
+﻿<Window
+    x:Class="Trivia.LandingWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Trivia"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Trivia"
+    Width="800"
+    Height="730"
+    Icon="pack://application:,,,/Trivia;component/Resources/Trivia_icon.png"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <!--  Define some reusable styles  -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#333333" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#4CAF50" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Window.Resources>
+    <StackPanel Margin="20" Background="#F0F0F0">
+        <Frame
+            x:Name="LandingWindow1"
+            Margin="10"
+            HorizontalAlignment="Center"
+            NavigationUIVisibility="Hidden" />
+
+        <StackPanel Orientation="Horizontal">
+
+            <Button
+                Name="userButton"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Click="userButton_Click">
+                <Image
+                    Width="30"
+                    Height="30"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    Source="/Trivia;component/Resources/user_logo.png" />
+            </Button>
+            <TextBlock
+                Margin="245,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="30"
+                FontWeight="Black"
+                Text="Trivia" />
+
+        </StackPanel>
+        <Button
+            x:Name="StartGameButton"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Click="Button_Start_Game_Click"
+            Content="Start Game" />
+
+        <!--  Description of the program  -->
+        <TextBlock TextAlignment="Justify" TextWrapping="Wrap">
+            <Run FontSize="16" FontWeight="Bold">Project Summary:</Run>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Trivia Game:</Run>
+            <Italic>Allows users to play a trivia game where questions are fetched from an external API. Users choose answers from multiple choices, earn scores, and progress through questions.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Game Mechanics:</Run>
+            <Italic>Users start the game, answer trivia questions displayed randomly. Scores are awarded based on correct answers. Game ends after a fixed number of questions.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">API Integration:</Run>
+            <Italic>Uses HttpClient to fetch trivia questions from an API. Deserializes JSON responses into C# objects to populate the game.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">User Interface:</Run>
+            <Italic>Designed using WPF with XAML, providing intuitive buttons and text blocks for gameplay and information display.</Italic>
+            <LineBreak />
+            <LineBreak />
+            <Run FontWeight="Bold">Technologies:</Run>
+            <Italic>Utilizes C#, WPF, XAML, and System.Net.Http for web requests, showcasing integration of modern technologies in desktop applications.</Italic>
+        </TextBlock>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/Trivia;component/Resources/Logo_C_Sharp.png" />
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/Trivia;component/Resources/WPF_logo.png" />
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/Trivia;component/Resources/XAML_logo.jpg" />
+            <Image
+                Width="50"
+                Height="50"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Source="/Trivia;component/Resources/API_logo.jpg" />
+        </StackPanel>
+
+    </StackPanel>
+</Window>

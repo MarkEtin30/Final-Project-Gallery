@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\API_logo.jpg" />
+    <None Remove="Resources\Body.png" />
+    <None Remove="Resources\DeadBody.png" />
+    <None Remove="Resources\DeadHead.png" />
+    <None Remove="Resources\DroidSansMono.ttf" />
+    <None Remove="Resources\Empty.png" />
+    <None Remove="Resources\Food.png" />
+    <None Remove="Resources\Head.png" />
+    <None Remove="Resources\Logo_C_Sharp.png" />
+    <None Remove="Resources\Snake_icon.png" />
+    <None Remove="Resources\Snake_Logo.png" />
+    <None Remove="Resources\user_logo.png" />
+    <None Remove="Resources\WPF_logo.png" />
+    <None Remove="Resources\XAML_logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\API_logo.jpg" />
+    <Resource Include="Resources\Body.png" />
+    <Resource Include="Resources\Empty.png" />
+    <Resource Include="Resources\Food.png" />
+    <Resource Include="Resources\Logo_C_Sharp.png" />
+    <Resource Include="Resources\Snake_icon.png" />
+    <Resource Include="Resources\user_logo.png" />
+    <Resource Include="Resources\WPF_logo.png" />
+    <Resource Include="Resources\XAML_logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="GameInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LandingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

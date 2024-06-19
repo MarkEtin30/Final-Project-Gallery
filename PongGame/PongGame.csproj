@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\API_logo.jpg" />
+    <None Remove="Resources\Logo_C_Sharp.png" />
+    <None Remove="Resources\Pong_icon.png" />
+    <None Remove="Resources\user_logo.png" />
+    <None Remove="Resources\WPF_logo.png" />
+    <None Remove="Resources\XAML_logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\API_logo.jpg" />
+    <Resource Include="Resources\Logo_C_Sharp.png" />
+    <Resource Include="Resources\Pong_icon.png" />
+    <Resource Include="Resources\user_logo.png" />
+    <Resource Include="Resources\WPF_logo.png" />
+    <Resource Include="Resources\XAML_logo.jpg" />
+  </ItemGroup>
+
+</Project>

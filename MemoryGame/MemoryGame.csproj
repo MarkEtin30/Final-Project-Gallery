@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\API_logo.jpg" />
+    <None Remove="resources\Color-white.jpeg" />
+    <None Remove="resources\Color-white.jpg" />
+    <None Remove="resources\Logo_C_Sharp.png" />
+    <None Remove="resources\memory_game_image1.jpg" />
+    <None Remove="resources\memory_game_image10.jpg" />
+    <None Remove="resources\memory_game_image2.jpg" />
+    <None Remove="resources\memory_game_image3.jpg" />
+    <None Remove="resources\memory_game_image4.jpg" />
+    <None Remove="resources\memory_game_image5.jpg" />
+    <None Remove="resources\memory_game_image6.jpg" />
+    <None Remove="resources\memory_game_image7.jpg" />
+    <None Remove="resources\memory_game_image8.jpg" />
+    <None Remove="resources\memory_game_image9.jpg" />
+    <None Remove="resources\Memory_logo.png" />
+    <None Remove="resources\user_logo.png" />
+    <None Remove="resources\white.jpg" />
+    <None Remove="resources\WPF_logo.png" />
+    <None Remove="resources\XAML_logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\API_logo.jpg" />
+    <Resource Include="resources\Color-white.jpeg" />
+    <Resource Include="resources\Color-white.jpg" />
+    <Resource Include="resources\Logo_C_Sharp.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\memory_game_image1.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image10.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image3.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image4.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image5.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image6.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image7.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image8.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\memory_game_image9.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Memory_logo.png" />
+    <Resource Include="resources\user_logo.png" />
+    <Resource Include="resources\white.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\WPF_logo.png" />
+    <Resource Include="resources\XAML_logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LandingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
+</Project>

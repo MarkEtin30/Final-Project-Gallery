@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Final_Project_Gallery</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\MemoryGame\MemoryGame.csproj" />
+    <ProjectReference Include="..\PokedexAPI\PokedexAPI.csproj" />
+    <ProjectReference Include="..\PongGame\PongGame.csproj" />
+    <ProjectReference Include="..\SnakeGame\SnakeGame.csproj" />
+    <ProjectReference Include="..\Trivia\Trivia.csproj" />
+    <ProjectReference Include="..\WeatherAPI\WeatherAPI.csproj" />
+  </ItemGroup>
+
+</Project>
